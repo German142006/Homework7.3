@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS в HTML</title>
+</head>
+
+<body>
+
+  <script>
+
+function askForNumber() {
+    let attempts = 10; // Максимальное количество итераций
+    let number;
+
+    for (let i = 0; i < attempts; i++) {
+        number = prompt("Введите число больше 100:");
+
+        // Преобразуем введенное значение в число
+        number = parseInt(number, 10);
+
+        // Проверяем, корректно ли введено число и больше ли оно 100
+        if (number > 100) {
+            break;
+        } else {
+            alert("Число должно быть больше 100. Попробуйте снова.");
+        }
+    }
+
+    // Выводим в консоль последнее введенное пользователем значение
+    console.log("Последнее введенное значение:", number);
+}
+
+// Вызов функции
+askForNumber();
+
+
+  </script>
+
+</body>
+
+</html>
